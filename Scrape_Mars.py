@@ -9,6 +9,15 @@ from bs4 import BeautifulSoup as bs
 import requests
 from splinter import Browser
 
+def init_browser():
+    executable_path = {"executable_path": "/usr/local/bin/chromedriver"}
+    return Browser("chrome", **executable_path, headless=False)
+
+
+def scrape_info():
+    browser = init_browser()
+
+
 
 # In[8]:
 
@@ -183,5 +192,5 @@ results = soup_ISGS.find_all('h3')
 # In[ ]:
 
 
-for result in results
+#for result in results
 
